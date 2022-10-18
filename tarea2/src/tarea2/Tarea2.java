@@ -115,10 +115,18 @@ class Expendedor{
         }
     }
     public Bebida comprarBebida(Moneda m, int tipo){
+        
         if(tipo == 1){
             return coca.getBebida();
         }
-        return sprite.getBebida();
+        if(tipo == 2){
+            return sprite.getBebida();
+        }
+        if(tipo == 3){
+            return fanta.getBebida();
+        }
+              
+      
     }
 }
 class Comprador{
