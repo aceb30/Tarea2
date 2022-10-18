@@ -4,9 +4,11 @@ package tarea2;
 import java.util.*;
 
 abstract class Bebida{
+    
     private int serie;
-    public Bebida(int a){
-        serie = a;
+    
+    public Bebida(int s){
+        serie = s;
     }
     public int getSerie(){
         return serie;
@@ -56,6 +58,7 @@ class Deposito{
         return al.remove(0);
     }
 }
+
 abstract class Moneda{
     public Moneda(){
         
@@ -150,6 +153,7 @@ class Expendedor{
         return null;
     }
 }
+
 class Comprador{
     private Moneda mon;
     private int bebida;
