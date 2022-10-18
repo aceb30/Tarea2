@@ -98,6 +98,25 @@ class DepositoVuelto{
         return al.remove(0);
     }
 }
+
+class NoHayBebidaException extends Exception{
+    public NoHayBebidaException(String message){
+        super(message);
+    }
+}
+
+class PagoInsuficienteException extends Exception{
+    public PagoInsuficienteException(String message){
+        super(message);
+    }
+}
+
+class PagoIncorrectoException extends Exception{
+    public PagoIncorrectoException(String message){
+        super(message);
+    }
+}
+
 class Expendedor{
     private Deposito coca;
     private Deposito sprite;
@@ -125,8 +144,10 @@ class Expendedor{
         if(tipo == 3){
             return fanta.getBebida();
         }
-              
-      
+        if(tipo != 1 & tipo != 2 & tipo != 3){
+            return null;
+        }     
+        return null;
     }
 }
 class Comprador{
