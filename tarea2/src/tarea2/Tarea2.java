@@ -60,28 +60,31 @@ class Deposito{
 }
 
 abstract class Moneda{
+    
     public Moneda(){
-        
+              
     }
+    int valor;
+    //public abstract int getValor();
 }
 class Moneda100 extends Moneda{
     public Moneda100(){
-        
+        valor=100;
     }
 }
 class Moneda500 extends Moneda{
     public Moneda500(){
-        
-    }
+        valor = 500;
+    }    
 }
 class Moneda1000 extends Moneda{
     public Moneda1000(){
-        
+        valor = 1000;
     }
 }
 class Moneda1500 extends Moneda{
     public Moneda1500(){
-        
+        valor = 1500;
     }
 }
 
@@ -136,8 +139,6 @@ class Comprador{
         expen = exp;
     }
 }
-
-
 
 public class Tarea2 {
 
