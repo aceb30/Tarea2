@@ -1,2 +1,3 @@
 # Tarea2
-Sí
+Bastián Eduardo Cabrera Arroyo
+Alex Fernando Jara Muñoz
