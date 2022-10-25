@@ -4,9 +4,16 @@ package tarea2;
 
 abstract class Moneda{
     
-    public Moneda(){
-              
-    }
     int valor;
-    //public abstract int getValor();
+    
+    public Moneda(){              
+    }
+    
+    public String getSerie(){
+        return this.getSerie();
+    }
+    
+    public abstract int getValor(){
+        return valor;
+    }
 }
