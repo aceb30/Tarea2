@@ -127,6 +127,7 @@ class Expendedor{
     private Deposito coca;
     private Deposito sprite;
     private Deposito fanta;
+    private DepositoVuelto depvuel;
     private int precio;
     public Expendedor(int cant, int pre){
         precio = pre;
