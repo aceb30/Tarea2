@@ -3,6 +3,13 @@ package tarea2;
 
 class Moneda100 extends Moneda{
     public Moneda100(){
-        valor=100;
+        
     }
+
+    @Override
+    public int getValor() {
+        return 100;
+    }
+    
+    
 }
