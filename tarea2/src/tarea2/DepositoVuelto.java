@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class DepositoVuelto {
      private ArrayList<Moneda100> al;
     public DepositoVuelto(){
-        al = new ArrayList<Moneda>();
+        al = new ArrayList<Moneda100>();
     }
     public void addMoneda(){
         al.add(new Moneda100());

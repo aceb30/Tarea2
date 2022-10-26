@@ -1,6 +1,5 @@
 package tarea2;
 
-import java.util.*;
 
 public class Tarea2 {
 
