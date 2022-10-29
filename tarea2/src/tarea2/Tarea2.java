@@ -11,13 +11,17 @@ public class Tarea2 {
         Moneda n = null;
         
         Expendedor expendedor = new Expendedor(5, 1000);
+        expendedor.AddVuelto();
+        expendedor.AddVuelto();
+        expendedor.AddVuelto();
+        expendedor.AddVuelto();
         
         Comprador pedro = new Comprador(m1, 1 , expendedor);
         Comprador bastian = new Comprador(m2, 2 , expendedor);
         Comprador alex = new Comprador(m3, 3 , expendedor);
+                
                        
-        
-        
+                
     }
 
 }
