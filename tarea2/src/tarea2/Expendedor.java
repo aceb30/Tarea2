@@ -8,6 +8,7 @@ public class Expendedor {
     private DepositoVuelto depvuel;
     private int precio;
     private int vuelto;
+    private Bebida b;
 
     public Expendedor(int cant, int pre) {
         vuelto = 0;
@@ -34,10 +35,14 @@ public class Expendedor {
     public void AddVuelto(Moneda m) {
         depvuel.addMoneda(m);
     }
+    
+    public String getSabor(){
+        return b.beber();
+    }
 
     public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
 
-        Bebida b = null;
+        b = null;
 
         if (m == null) {
             throw new PagoIncorrectoException("Pago incorrecto");

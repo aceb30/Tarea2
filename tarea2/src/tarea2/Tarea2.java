@@ -13,16 +13,15 @@ public class Tarea2 {
         Moneda m3 = new Moneda1000();
         Moneda n = null;
 
-        Expendedor expendedor = new Expendedor(5, 800);
+        Expendedor expendedor = new Expendedor(1, 800);
 
         Comprador furry;
         try {
-            furry = new Comprador(m3, 1, expendedor);
+            furry = new Comprador(m3, 2, expendedor);
 
             System.out.println(furry.getVuelto());
-            System.out.println(furry.getVuelto());
-            System.out.println(furry.getVuelto());
-            System.out.println(furry.getVuelto());
+            System.out.println(furry.getSabor());
+            
         } catch (Exception e) {
             System.out.println(e);
         }
