@@ -27,16 +27,17 @@ public class Expendedor {
     public int getSize(){
         return depvuel.getSize();
     }
-    public void AddVuelto(){
-        depvuel.addMoneda();
+    public void AddVuelto(Moneda m){
+        depvuel.addMoneda(m);
     }
     
-    public Bebida comprarBebida(Moneda mon, int tipo) throws NoHayBebidaException {
+    public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException {
         
         Bebida b = null;
         
-        int dinero = mon.getValor();
+        int dinero = m.getValor();
         System.out.println(dinero);
+        System.out.println("-----");
         
         if(dinero>precio){
             
@@ -61,14 +62,22 @@ public class Expendedor {
         if(b != null){
             
             if(vuelto > 0){
-               for(int i =0; i<(vuelto/100);++i){
-                   AddVuelto();
+                
+                for(int i = 0; i < (vuelto / 100); ++i){                                                           
+                    
+                    m=null;
+                    AddVuelto(m);
+                    System.out.println("---");
                } 
             }
             return b;
         }
-        else
-        return coca.getBebida();
-        //throw new NoHayBebidaException("No hay bebida");
+        
+        else{
+                   
+            throw new NoHayBebidaException("No hay bebida");
+        }
+            
+            
     }
 }

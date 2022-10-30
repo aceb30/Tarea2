@@ -5,17 +5,25 @@ import java.util.ArrayList;
 
 
 public class DepositoVuelto {
-     private ArrayList<Moneda100> al;
+    
+    private ArrayList<Moneda> al;
+    
     public DepositoVuelto(){
-        al = new ArrayList<Moneda100>();
+        al = new ArrayList<Moneda>();
     }
-    public void addMoneda(){
-        al.add(new Moneda100());
-    }
-    public Moneda100 getMoneda(){
-        if(al.size()==0){
-            return null;
+    public void addMoneda(Moneda m){
+        if (m!=null) {
+            al.add(m);
         }
+        else
+        al.add(new Moneda100());
+        
+    }
+    
+    public Moneda getMoneda(){
+        if(al.isEmpty()){
+            return null;
+        }else
         return al.remove(0);
     }
     public int getSize(){

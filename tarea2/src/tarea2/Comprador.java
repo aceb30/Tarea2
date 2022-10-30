@@ -6,15 +6,17 @@ public class Comprador {
     
     private int bebida;    
     private String sabor;
-    private int vuelto;
+    private int vuelto=0;
     
     public Comprador(Moneda m, int cualBebida, Expendedor exp)throws NoHayBebidaException{
-
-        sabor = exp.comprarBebida(m, cualBebida).beber();
+        
         vuelto = 0;
+        
         if(exp.getSize()!=0){
+            
             while(exp.getVuelto() != null){
-                vuelto = vuelto + exp.getVuelto().getValor();
+                
+                vuelto = vuelto + exp.getVuelto().getValor();                
             }
         }        
     }
