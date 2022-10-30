@@ -32,18 +32,21 @@ public class Expendedor {
     }
 
     public void AddVuelto() {
-        depvuel.addMoneda();
+        depvuel.addMoneda(null);
     }
 
     public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
+        
         Bebida b = null;
-        if(m == null) {
+
+        if (m == null) {            
             throw new PagoIncorrectoException("Pago incorrecto");
         }
         int dinero = m.getValor();
         if (dinero >= precio) {
             vuelto = dinero - precio;
         } else {
+            depvuel.addMoneda(m);
             throw new PagoInsuficienteException("Pago insuficiente");
         }
         switch (tipo) {
@@ -57,23 +60,19 @@ public class Expendedor {
             case 3:
                 b = fanta.getBebida();
                 break;
-            }
+
         }
 
         if (b != null) {
             if (vuelto > 0) {
                 for (int i = 0; i < (vuelto / 100); ++i) {
-                    AddVuelto();
+                    AddVuelto();                    
                 }
             }
             return b;
-        }
-        
-        else{
-                   
+        } else {
+
             throw new NoHayBebidaException("No hay bebida");
         }
-            
-            
-
+    }
 }

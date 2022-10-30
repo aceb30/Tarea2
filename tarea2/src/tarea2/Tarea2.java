@@ -3,7 +3,7 @@ package tarea2;
 
 public class Tarea2 {
 
-    public static void main(String[] args) throws NoHayBebidaException {        
+    public static void main(String[] args) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {        
         
         Moneda m1 = new Moneda100();        
         Moneda m2 = new Moneda500();
@@ -12,14 +12,21 @@ public class Tarea2 {
         
         Expendedor expendedor = new Expendedor(5, 800);        
         
-        Comprador pedro = new Comprador(m1, 1 , expendedor);        
-        Comprador bastian = new Comprador(m2, 2 , expendedor);        
-        Comprador alex = new Comprador(m3, 3 , expendedor);
+        Comprador furry = new Comprador(m3, 1 , expendedor);
         
-        System.out.println(expendedor.comprarBebida(m3, 3));       
+        System.out.println(furry.getVuelto());
+        System.out.println(furry.getVuelto());
+        System.out.println(furry.getVuelto());
+        System.out.println(furry.getVuelto());
         
-        System.out.println(pedro.getVuelto());
-        System.out.println(pedro.getVuelto());
+        
+        //Comprador bastian = new Comprador(m2, 2 , expendedor);        
+        //Comprador alex = new Comprador(m3, 3 , expendedor);
+        
+             
+
+        
+        
         
 
  

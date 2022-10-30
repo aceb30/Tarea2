@@ -1,4 +1,3 @@
-
 package tarea2;
 
 class Moneda100 extends Moneda{

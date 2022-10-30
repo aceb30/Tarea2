@@ -21,9 +21,10 @@ public class DepositoVuelto {
     }
     
     public Moneda getMoneda(){
-        if(al.isEmpty()){
+        
+        if(al.size()==0){
             return null;
-        }else
+        }
         return al.remove(0);
     }
     public int getSize(){

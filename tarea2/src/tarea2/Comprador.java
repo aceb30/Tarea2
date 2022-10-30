@@ -8,7 +8,9 @@ public class Comprador {
     private String sabor;
     private int vuelto=0;
     
-    public Comprador(Moneda m, int cualBebida, Expendedor exp)throws NoHayBebidaException{
+    public Comprador(Moneda m, int cualBebida, Expendedor exp)throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException{
+        
+        exp.comprarBebida(m, cualBebida);
         
         vuelto = 0;
         
