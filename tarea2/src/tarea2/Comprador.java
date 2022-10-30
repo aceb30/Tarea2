@@ -7,9 +7,11 @@ public class Comprador {
     private int vuelto = 0;
 
     public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
-        exp.comprarBebida(m, cualBebida);
+        
+        Bebida b = exp.comprarBebida(m, cualBebida);
 
         vuelto = 0;
+        
         while (true) {
             if (exp.getSize() != 0) {
                 Moneda v = exp.getVuelto();
@@ -18,6 +20,7 @@ public class Comprador {
                 break;
             }
         }
+        sabor = b.beber();
     }
 
     public int getVuelto() {
