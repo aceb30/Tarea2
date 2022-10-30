@@ -1,6 +1,6 @@
 package tarea2;
 
-abstract class Moneda {
+abstract public class Moneda {
 
     public Moneda() {
 
