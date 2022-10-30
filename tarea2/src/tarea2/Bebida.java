@@ -1,7 +1,7 @@
 
 package tarea2;
 
-abstract class Bebida{
+abstract public class Bebida{
     
     private int serie;
     
