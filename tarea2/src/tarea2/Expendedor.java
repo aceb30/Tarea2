@@ -8,6 +8,7 @@ public class Expendedor {
     private DepositoVuelto depvuel;
     private int precio;
     private int vuelto;
+
     public Expendedor(int cant, int pre) {
         vuelto = 0;
         precio = pre;
@@ -21,23 +22,31 @@ public class Expendedor {
             fanta.addBebida(new Fanta(i + 100));
         }
     }
-    public Moneda getVuelto(){
+
+    public Moneda getVuelto() {
         return depvuel.getMoneda();
     }
-    public int getSize(){
+
+    public int getSize() {
         return depvuel.getSize();
     }
-    public void AddVuelto(){
+
+    public void AddVuelto() {
         depvuel.addMoneda();
     }
-    
-    public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException {
+
+    public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         Bebida b = null;
-        int dinero = m.getValor();
-        if(dinero>precio){
-            vuelto = dinero - precio;
+        if(m == null) {
+            throw new PagoIncorrectoException("Pago incorrecto");
         }
-        switch(tipo) {
+        int dinero = m.getValor();
+        if (dinero >= precio) {
+            vuelto = dinero - precio;
+        } else {
+            throw new PagoInsuficienteException("Pago insuficiente");
+        }
+        switch (tipo) {
             case 1:
                 b = coca.getBebida();
                 break;
@@ -48,11 +57,11 @@ public class Expendedor {
                 b = fanta.getBebida();
                 break;
         }
-        if(b != null){
-            if(vuelto > 0){
-               for(int i =0; i<(vuelto/100);++i){
-                   AddVuelto();
-               } 
+        if (b != null) {
+            if (vuelto > 0) {
+                for (int i = 0; i < (vuelto / 100); ++i) {
+                    AddVuelto();
+                }
             }
             return b;
         }
