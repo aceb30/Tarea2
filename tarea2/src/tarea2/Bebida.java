@@ -1,17 +1,18 @@
-
 package tarea2;
 
-abstract public class Bebida{
-    
+abstract public class Bebida {
+
     private int serie;
-    
-    public Bebida(int s){
+
+    public Bebida(int s) {
         serie = s;
     }
-    public int getSerie(){
+
+    public int getSerie() {
         return serie;
     }
-    public String beber(){
+
+    public String beber() {
         return "sabor: ";
     }
 }
