@@ -1,7 +1,7 @@
-
 package tarea2;
 
 class Moneda100 extends Moneda{
+    
     public Moneda100(){
         
     }
@@ -9,7 +9,5 @@ class Moneda100 extends Moneda{
     @Override
     public int getValor() {
         return 100;
-    }
-    
-    
+    }  
 }
