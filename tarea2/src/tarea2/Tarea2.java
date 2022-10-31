@@ -15,12 +15,12 @@ public class Tarea2 {
 
         Expendedor expendedor = new Expendedor(1, 800);
 
-        Comprador furry;
+        Comprador pedro;
         try {
-            furry = new Comprador(m3, 2, expendedor);
+            pedro = new Comprador(m3, 2, expendedor);
 
-            System.out.println(furry.getVuelto());
-            System.out.println(furry.getSabor());
+            System.out.println(pedro.getVuelto());
+            System.out.println(pedro.getSabor());
             
         } catch (Exception e) {
             System.out.println(e);
